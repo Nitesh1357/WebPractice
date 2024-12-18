@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(5, 5, 5);
+    color: #fff;
+  }
+  
+  .container {
+    display: flex;
+    width: 100vw;
+  }
+  
+  .bg-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  /* IMAGES SOURCES  */
+  /* https://wallpapercave.com/pc-games-wallpapers  */
+  
+  .image-1 {
+    background-image: url(https://th.bing.com/th/id/OIP.pAcu7875Nl6e_M0tBXBzGQAAAA?rs=1&pid=ImgDetMain);
+  }
+  
+  .image-2 {
+    background-image: url(https://wallpapertag.com/wallpaper/full/d/3/c/968676-hi-res-background-images-2651x1813-retina.jpg);
+  }
+  
+  .image-3 {
+    background-image: url(https://image.shutterstock.com/image-photo/butterfly-grass-on-meadow-night-260nw-1111729556.jpg);
+  }
+  
+  .image-4 {
+    background-image: url(https://th.bing.com/th/id/OIP.vpUUrAb6H7eMCIM4TRzpcAHaFj?rs=1&pid=ImgDetMain);
+  }
+  
+  .image-5 {
+    background-image: url(https://th.bing.com/th/id/OIP.gT89VKgLiZ1veatCKU0tmAHaEK?w=310&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7);
+  }
+  
+  .slide {
+    position: relative;
+    height: 80vh;
+    flex: 0.5;
+    border-radius: 50px;
+    color: #fff;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 700ms ease-in;
+  }
+  
+  .slide h3 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+    font-size: 24px;
+  }
+  
+  @media (max-width: 480px) {
+    .slide:nth-of-type(4),
+    .slide:nth-of-type(5) {
+      display: none;
+    }
+  }
+  
+  /* JavaScript */
+  .slide.active {
+    flex: 5;
+  }
+  
+  .slide.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+  }
