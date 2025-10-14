@@ -1,0 +1,393 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+  color: white;
+}
+
+.header h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header p {
+  font-size: 1.2em;
+  opacity: 0.9;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.button-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  transition: transform 0.3s ease;
+}
+
+.button-card:hover {
+  transform: translateY(-5px);
+}
+
+.button-card h3 {
+  color: #333;
+  font-size: 1.1em;
+}
+
+/* Button 1: Neon Glow */
+.btn-1 {
+  padding: 15px 40px;
+  font-size: 16px;
+  background: #000;
+  color: #0ff;
+  border: 2px solid #0ff;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+}
+
+.btn-1:hover {
+  background: #0ff;
+  color: #000;
+  box-shadow: 0 0 20px #0ff, 0 0 40px #0ff, 0 0 60px #0ff;
+}
+
+/* Button 2: Gradient Slide */
+.btn-2 {
+  padding: 15px 40px;
+  font-size: 16px;
+  background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%);
+  transition: all 0.5s ease;
+}
+
+.btn-2:hover::before {
+  left: 0;
+}
+
+.btn-2 span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Button 3: Border Expand */
+.btn-3 {
+  padding: 15px 40px;
+  font-size: 16px;
+  background: transparent;
+  color: #e74c3c;
+  border: 3px solid #e74c3c;
+  border-radius: 0;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.btn-3::before,
+.btn-3::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  transition: all 0.4s ease;
+}
+
+.btn-3::before {
+  top: -3px;
+  left: -3px;
+  border-top: 3px solid #e74c3c;
+  border-left: 3px solid #e74c3c;
+}
+
+.btn-3::after {
+  bottom: -3px;
+  right: -3px;
+  border-bottom: 3px solid #e74c3c;
+  border-right: 3px solid #e74c3c;
+}
+
+.btn-3:hover::before,
+.btn-3:hover::after {
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+}
+
+.btn-3:hover {
+  color: white;
+  background: #e74c3c;
+}
+
+/* Button 4: 3D Push */
+.btn-4 {
+  padding: 15px 40px;
+  font-size: 16px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 8px 0 #2980b9, 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.1s ease;
+}
+
+.btn-4:hover {
+  box-shadow: 0 6px 0 #2980b9, 0 8px 15px rgba(0, 0, 0, 0.3);
+  transform: translateY(2px);
+}
+
+.btn-4:active {
+  box-shadow: 0 2px 0 #2980b9, 0 4px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(6px);
+}
+
+/* Button 5: Ripple Effect */
+.btn-5 {
+  padding: 15px 40px;
+  font-size: 16px;
+  background: #9b59b6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-5::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn-5:hover::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* Button 6: Rotate and Scale */
+.btn-6 {
+  padding: 15px 40px;
+  font-size: 16px;
+  background: #e67e22;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.btn-6:hover {
+  transform: rotate(5deg) scale(1.1);
+  background: #d35400;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Button 7: Flip */
+.btn-7 {
+  padding: 15px 40px;
+  font-size: 16px;
+  background: #16a085;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.5s ease;
+  transform-style: preserve-3d;
+}
+
+.btn-7:hover {
+  transform: rotateX(360deg);
+  background: #1abc9c;
+}
+
+/* Button 8: Slide Border */
+.btn-8 {
+  padding: 15px 40px;
+  font-size: 16px;
+  background: white;
+  color: #c0392b;
+  border: 2px solid #c0392b;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.4s ease;
+}
+
+.btn-8::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #c0392b;
+  transition: left 0.4s ease;
+  z-index: -1;
+}
+
+.btn-8:hover {
+  color: white;
+}
+
+.btn-8:hover::before {
+  left: 0;
+}
+
+/* Button 9: Bounce */
+.btn-9 {
+  padding: 15px 40px;
+  font-size: 16px;
+  background: #f39c12;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-9:hover {
+  animation: bounce 0.6s ease;
+  background: #f1c40f;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  75% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Button 10: Split Fill */
+.btn-10 {
+  padding: 15px 40px;
+  font-size: 16px;
+  background: transparent;
+  color: #2c3e50;
+  border: 3px solid #2c3e50;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.5s ease;
+}
+
+.btn-10::before,
+.btn-10::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: #2c3e50;
+  transition: width 0.5s ease;
+  z-index: -1;
+}
+
+.btn-10::before {
+  left: 50%;
+}
+
+.btn-10::after {
+  right: 50%;
+}
+
+.btn-10:hover {
+  color: white;
+}
+
+.btn-10:hover::before,
+.btn-10:hover::after {
+  width: 50%;
+}
+
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #27ae60;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
