@@ -1,4 +1,4 @@
-# 🚀 Web Dev Playground: Small Projects to Boost Your Skills
+# 🚀 Web Dev Playground: Small Projects to Boost Your Skillsgfhjkl;'
 
 Welcome to the **Web Dev Playground**! 🎉 This repository contains a collection of small, fun, and educational web development projects designed to help you enhance your coding skills, learn new frontend technologies, and build your portfolio.
 
@@ -76,6 +76,7 @@ This repository is licensed under the **MIT License**.
 ## ✨ Happy Coding!
 
 Feel free to reach out or raise issues if you have any questions or feedback.
+
 
 
 
